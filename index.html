@@ -55,26 +55,94 @@
             </div>
         </nav>
 
-        <div class="container">
-            <div style="height: 500px;padding: 50px 0;">
-
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="/assets/images/slide-1-bg.jpg" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Grand Opening</h1>
+                            <h3>For women by women</h3>
+                            <p>Physical therapy & wellness services provided by women's health certified specialists in Elmhurst, Illinois.</p>
+                            <p><a class="btn btn-outline btn-white" href="#" role="button">About Us</a></p>
+                        </div>
+                        <div class="carousel-caption-image">
+                            <img src="/assets/images/slide-1-callout.png" alt="Second slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="item item-light">
+                    <img src="/assets/images/slide-2-bg.jpg" alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Physical Therapy</h1>
+                            <h3>Specialized treatment</h3>
+                            <p>For incontinence, pre and post-partum pain, bowel and bladder dysfunction, and more.</p>
+                            <p><a class="btn btn-outline btn-gray" href="#" role="button">Learn More</a></p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="item item-light">
+                    <img src="/assets/images/slide-3-bg.jpg" alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Wellness</h1>
+                            <h3>Customized for you</h3>
+                            <p>Private personal training and small group exercise classes. </p>
+                            <p><a class="btn btn-outline btn-gray" href="#" role="button">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+        <div class="banner-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-right">
+                        <span class="latest-news-label">Keep up to date with our latest news:</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <form class="input-group newsletter">
+                            <span class="input-group-addon"></span>
+                            <input type="text" class="form-control" placeholder="Enter your email address">
+                            <span class="input-group-addon"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="height: 300px;">
+            
         </div>
 
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8 col-sm-push-4">
+                    <div class="col-sm-9 col-sm-push-3">
                         <div class="footer-right">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h4>Keep up to date with our latest news:</h4>
+                                    <span class="latest-news-label">Keep up to date with our latest news:</span>
                                 </div>
                                 <div class="col-sm-6">
                                     <form class="input-group newsletter">
                                         <span class="input-group-addon"></span>
                                         <input type="text" class="form-control" placeholder="Enter your email address">
-                                        <span class="input-group-addon" ></span>
+                                        <span class="input-group-addon"></span>
                                     </form>
                                 </div>
                             </div>
@@ -111,7 +179,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-sm-pull-8 gray-bg">
+                    <div class="col-sm-3 col-sm-pull-9 gray-bg">
                         <div class="footer-left">
                             <img src="/assets/images/logo.png" alt="Vitality" class="img-responsive" />
                             <p>
@@ -134,11 +202,11 @@
         
     <nav id="slide-nav">
         <ul class="nav-list">
-            <li><a data-nav href="#main-content">Vitality | HOME</a></li>
-            <li><a data-nav href="#services">Services</a></li>
-            <li><a data-nav href="#testimonials">Testimonials</a></li>
-            <li><a data-nav href="#about">About</a></li>
-            <li><a data-nav href="#contact">Contact</a></li>
+            <li><a href="#main-content">Vitality | HOME</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 

@@ -7,25 +7,46 @@
     <setting name="IgnoreWarnings">True</setting>
     <setting name="IgnoreErrors">True</setting>
   </file>
-  <file name="_footer.less">
+  <file name="carousel.less">
     <setting name="Compile">False</setting>
     <setting name="Minify">False</setting>
     <setting name="OutputFolder"></setting>
-    <setting name="IgnoreWarnings">False</setting>
-    <setting name="IgnoreErrors">False</setting>
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
   </file>
-  <file name="_global.less">
+  <file name="footer.less">
     <setting name="Compile">False</setting>
     <setting name="Minify">False</setting>
     <setting name="OutputFolder"></setting>
-    <setting name="IgnoreWarnings">False</setting>
-    <setting name="IgnoreErrors">False</setting>
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
   </file>
-  <file name="_header.less">
+  <file name="global.less">
     <setting name="Compile">False</setting>
     <setting name="Minify">False</setting>
     <setting name="OutputFolder"></setting>
-    <setting name="IgnoreWarnings">False</setting>
-    <setting name="IgnoreErrors">False</setting>
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
+  </file>
+  <file name="header.less">
+    <setting name="Compile">False</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
+  </file>
+  <file name="mixins.less">
+    <setting name="Compile">False</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder"></setting>
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
+  </file>
+  <file name="buttons.less">
+    <setting name="Compile">False</setting>
+    <setting name="Minify">False</setting>
+    <setting name="OutputFolder" />
+    <setting name="IgnoreWarnings">True</setting>
+    <setting name="IgnoreErrors">True</setting>
   </file>
 </web-workbench>

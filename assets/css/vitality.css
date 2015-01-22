@@ -8,9 +8,26 @@ body {
 .gray-bg {
   background-color: #e7eef4;
 }
+.banner-bar {
+  padding: 18px 0;
+  background-color: #c5cfd6;
+}
+.latest-news-label {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #009ac7;
+  margin: 18px 0 0 0;
+  display: inline-block;
+  margin-top: 15px;
+}
 .input-group.newsletter {
-  margin: 0 0 20px 0;
+  margin: 0;
   width: 100%;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 18px;
 }
 .input-group.newsletter .form-control {
   border: solid 1px #e7eef4;
@@ -39,7 +56,6 @@ body {
         line-height: 1;
         color: #555;
         text-align: center;*/
-
   border: solid 1px #e7eef4;
   border-radius: 6px;
 }
@@ -60,10 +76,13 @@ body {
 */
 .navbar {
   position: relative;
+  z-index: 100;
   min-height: 50px;
   margin-bottom: 0;
   border: none;
-  border-bottom: solid 1px #009ac7;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .navbar .nav-callout {
   font-family: 'Courgette';
@@ -82,7 +101,7 @@ body {
   margin-left: 8px;
 }
 .navbar-inverse {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #6a737b;
@@ -159,7 +178,7 @@ body {
   font-family: 'Roboto Slab';
   font-size: 16px;
   padding: 10px 20px;
-  border: solid 2px #fff;
+  border: solid 2px transparent;
 }
 .nav > li.outline {
   margin-left: 10px;
@@ -167,9 +186,19 @@ body {
 .nav > li.outline a {
   color: #0095c3;
   border-color: #0095c3;
-  border-radius: 30px;
   padding-left: 25px;
   padding-right: 25px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.nav > li.outline a:hover {
+  background-color: #0095c3;
+  color: #fff;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -269,24 +298,36 @@ body {
 .footer .footer-bottom ul li {
   margin: 0 10px;
 }
+.footer .footer-left {
+  padding-top: 50px;
+  padding-bottom: 45px;
+  text-align: center;
+}
 .footer .footer-left p {
   font-size: 12px;
   color: #6a737b;
   line-height: 22px;
+  margin-top: 60px;
+  display: inline-block;
+  text-align: left;
 }
 .footer .footer-left p a {
   color: inherit;
 }
+.footer .footer-left img {
+  display: block;
+  /*max-width: 100%;
+            height: auto;*/
+  width: 235px;
+  height: 85px;
+  margin: 0 auto;
+}
 .footer .footer-right {
   padding: 25px 0;
+  margin-left: 80px;
 }
-.footer .footer-right h4 {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #009ac7;
-  margin: 18px 0 0 0;
+.footer .footer-right .newsletter {
+  margin-bottom: 20px;
 }
 .footer .footer-nav {
   columns: 2;
@@ -333,5 +374,125 @@ body {
 }
 .footer .box .social a {
   color: inherit;
+}
+.carousel {
+  height: 632px;
+  margin-bottom: 0;
+  margin-top: -140px;
+  position: relative;
+  z-index: 99;
+}
+/*.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    
+}*/
+.carousel-caption {
+  z-index: 10;
+  text-align: left;
+  text-shadow: none;
+  top: 220px;
+  left: 18%;
+}
+.carousel-caption h1 {
+  font-family: 'Roboto Slab';
+  font-size: 55px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 0;
+  line-height: 1;
+}
+.carousel-caption h3 {
+  font-family: 'Courgette';
+  font-size: 30px;
+  color: #6ddaba;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.carousel-caption p {
+  font-family: 'Roboto Slab';
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.carousel-caption-image {
+  position: absolute;
+  right: 20%;
+  top: 185px;
+  display: none;
+}
+.carousel .item.item-light h1 {
+  color: #009ac7;
+}
+.carousel .item.item-light p {
+  color: #6a737b;
+}
+.carousel .item {
+  height: 632px;
+  background-color: #fff;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 632px;
+}
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  filter: none;
+}
+.carousel-indicators li {
+  border-color: #fff;
+  background-color: #fff;
+}
+.carousel-indicators .active {
+  background-color: #5fc2a5;
+  border-color: #5fc2a5;
+}
+@media (min-width: 768px) {
+  .carousel-caption-image {
+    display: block;
+  }
+}
+.btn-outline {
+  padding: 10px 40px;
+  border-style: solid;
+  border-width: 2px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.btn-outline.btn-white {
+  border-color: #fff;
+  color: #fff;
+}
+.btn-outline.btn-white:hover {
+  background-color: #fff;
+  color: #009ac7;
+}
+.btn-outline.btn-gray {
+  border-color: #6a737b;
+  color: #6a737b;
+}
+.btn-outline.btn-gray:hover {
+  background-color: #6a737b;
+  color: #fff;
 }
 

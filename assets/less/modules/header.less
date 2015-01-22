@@ -1,12 +1,16 @@
+
+@import "mixins.less";
+
 /*
 	Header
 */
 .navbar {
     position: relative;
+    z-index: 100;
     min-height: 50px;
     margin-bottom: 0;
-    border: none;
-    border-bottom: solid 1px #009ac7;
+    border: none;    
+    .border-radius(0);
 
     .nav-callout {
         font-family: 'Courgette';
@@ -28,7 +32,7 @@
 }
 
 .navbar-inverse {
-    background-color: #fff;
+    background-color:rgba(255,255,255,0.7);
 
     .navbar-nav > li > a {
         color: #6a737b;
@@ -116,7 +120,7 @@
     font-family: 'Roboto Slab';
     font-size: 16px;
     padding: 10px 20px;
-    border: solid 2px #fff;
+    border: solid 2px transparent;
 }
 
 .nav > li {
@@ -126,10 +130,16 @@
 
         a {
             color: #0095c3;
-            border-color: #0095c3;
-            border-radius: 30px;
+            border-color: #0095c3;            
             padding-left: 25px;
             padding-right: 25px;
+            .border-radius(30px);
+            .transition(all 0.2s ease);
+
+            &:hover {
+                background-color: #0095c3;
+                color: #fff;
+            }
         }
     }
 }
