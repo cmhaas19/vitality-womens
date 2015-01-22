@@ -8,12 +8,52 @@ body {
 .gray-bg {
   background-color: #e7eef4;
 }
-.promo {
-  padding: 30px 0;
+.input-group.newsletter {
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+.input-group.newsletter .form-control {
+  border: solid 1px #e7eef4;
+  background-color: #e7eef4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 8px 12px;
+  height: 48px;
+}
+.input-group.newsletter :-moz-placeholder {
+  color: #c5cfd6;
+}
+.input-group.newsletter ::-webkit-input-placeholder {
+  color: #c5cfd6;
+}
+.input-group.newsletter ::-moz-placeholder {
+  color: #c5cfd6;
+}
+.input-group.newsletter :-ms-input-placeholder {
+  color: #c5cfd6;
+}
+.input-group.newsletter .input-group-addon {
+  padding: 0;
+  /*font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        color: #555;
+        text-align: center;*/
+
+  border: solid 1px #e7eef4;
   border-radius: 6px;
 }
-.promo.green {
-  background-color: #60c2a6;
+.input-group.newsletter .input-group-addon:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 55px;
+  background: url(../images/newsletter-sprite.png) 5px 2px no-repeat #e7eef4;
+}
+.input-group.newsletter .input-group-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 55px;
+  background: url(../images/newsletter-sprite.png) -1px -37px no-repeat #e7eef4;
 }
 /*
 	Header
@@ -23,6 +63,7 @@ body {
   min-height: 50px;
   margin-bottom: 0;
   border: none;
+  border-bottom: solid 1px #009ac7;
 }
 .navbar .nav-callout {
   font-family: 'Courgette';
@@ -51,15 +92,19 @@ body {
   color: #009ac7;
   background-color: transparent;
 }
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
+.navbar-inverse .navbar-nav > .dropdown.open > a,
+.navbar-inverse .navbar-nav > .dropdown:hover > a,
+.navbar-inverse .navbar-nav > .dropdown.open > a:hover,
+.navbar-inverse .navbar-nav > .dropdown:hover > a:hover,
+.navbar-inverse .navbar-nav > .dropdown.open > a:focus,
+.navbar-inverse .navbar-nav > .dropdown:hover > a:focus {
   color: #fff;
   background-color: inherit;
   border-color: inherit;
   position: relative;
 }
-.navbar-inverse .navbar-nav > .open > a:after {
+.navbar-inverse .navbar-nav > .dropdown.open > a:after,
+.navbar-inverse .navbar-nav > .dropdown:hover > a:after {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -74,12 +119,41 @@ body {
   margin-left: -25px;
   z-index: 1001;
 }
+.navbar-inverse .navbar-toggle {
+  border-color: #009ac7;
+  z-index: 200;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  margin: 0;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #009ac7;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  border-color: #60c2a6;
+  background-color: #fff;
+}
+.navbar-inverse .navbar-toggle:hover .icon-bar,
+.navbar-inverse .navbar-toggle:focus .icon-bar {
+  background-color: #60c2a6;
+}
+.navbar-header {
+  padding: 15px;
+  text-align: center;
+}
 .navbar-brand {
-  float: left;
+  float: none;
   height: auto;
-  padding: 20px 15px;
+  padding: 0;
   font-size: 18px;
   line-height: 20px;
+}
+.navbar-brand img {
+  display: inline-block;
+  width: 206px;
+  height: 75px;
 }
 .nav > li > a {
   font-family: 'Roboto Slab';
@@ -97,6 +171,10 @@ body {
   padding-left: 25px;
   padding-right: 25px;
 }
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown:hover,
 .dropdown.open {
   background-color: #009ac7;
   border-top-left-radius: 6px;
@@ -109,7 +187,7 @@ body {
   box-shadow: none;
   background-color: #eaf7fb;
   padding: 0;
-  min-width: 190px;
+  min-width: 177px;
 }
 .dropdown-menu > li > a {
   padding: 20px 20px;
@@ -125,6 +203,17 @@ body {
   background-color: #fff;
 }
 @media (min-width: 768px) {
+  .navbar-header {
+    padding: 25px;
+    text-align: match-parent;
+  }
+  .navbar-brand {
+    float: left;
+  }
+  .navbar-brand img {
+    width: 257px;
+    height: 93px;
+  }
   .navbar-nav {
     float: right;
     margin: 0;
@@ -155,38 +244,6 @@ body {
 .mm-list > li > span:hover {
   color: #f4856e;
 }
-.menu-button {
-  display: block;
-  position: absolute;
-  border: solid 1px #7d6a56;
-  padding: 5px;
-  top: 4px;
-  left: 15px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.menu-button span {
-  display: block;
-  width: 32px;
-  height: 3px;
-  background-color: #7d6a56;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  margin-top: 4px;
-}
-.menu-button span:first-child {
-  margin-top: 0;
-}
-@media only screen and (min-width: 720px) {
-  .menu-button {
-    display: none;
-  }
-}
 /*
 	Footer
 */
@@ -195,15 +252,13 @@ body {
   font-family: 'Roboto Slab';
   font-size: 14px;
 }
-.footer p {
-  font: inherit;
-}
 .footer .footer-bottom {
   background-color: #6a737b;
   text-align: center;
   color: #c5cfd6;
   font-size: 12px;
-  line-height: 30px;
+  height: 30px;
+  padding: 5px 0;
 }
 .footer .footer-bottom a {
   color: inherit;
@@ -222,6 +277,17 @@ body {
 .footer .footer-left p a {
   color: inherit;
 }
+.footer .footer-right {
+  padding: 25px 0;
+}
+.footer .footer-right h4 {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #009ac7;
+  margin: 18px 0 0 0;
+}
 .footer .footer-nav {
   columns: 2;
   -webkit-columns: 2;
@@ -234,5 +300,38 @@ body {
   font-size: 14px;
   display: inline-block;
   margin: 5px 0;
+}
+.footer .box {
+  padding: 25px 20px;
+  border-radius: 6px;
+  background-color: #60c2a6;
+  font-family: 'Roboto Slab';
+  color: #fff;
+  font-size: 14px;
+}
+.footer .box label {
+  font-size: 12px;
+  color: #32846c;
+  display: block;
+  text-transform: uppercase;
+}
+.footer .box .phone {
+  font-size: 22px;
+  margin-bottom: 5px;
+  display: block;
+}
+.footer .box p {
+  font-size: inherit;
+  margin-bottom: 0;
+}
+.footer .box .fa {
+  margin: 0 10px 0 5px;
+  font-size: 18px;
+}
+.footer .box .social {
+  line-height: 2.2em;
+}
+.footer .box .social a {
+  color: inherit;
 }
 
