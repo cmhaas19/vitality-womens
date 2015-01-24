@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Roboto Slab', Arial,sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
@@ -56,11 +56,6 @@ body {
 
     .input-group-addon {
         padding: 0;
-        /*font-size: 14px;
-        font-weight: normal;
-        line-height: 1;
-        color: #555;
-        text-align: center;*/
         border: solid 1px #e7eef4;
         border-radius: 6px;        
 
@@ -78,4 +73,73 @@ body {
             background: url(../images/newsletter-sprite.png) -1px -37px no-repeat #e7eef4; 
         }
     }
+}
+
+.featurettes {
+    background: url(../images/blue-tree-bg.png) center right no-repeat #eaf7fb;
+    padding: 35px 0; 
+    /*background-size: 100%;*/
+}
+
+.featurette {
+    padding: 30px;
+    height: 210px;   
+    color: #fff;
+    
+
+    &.left {
+        background: url(../images/callout-bg-1.jpg) no-repeat #737b83;
+        background-size: cover;
+    }
+
+    &.right {
+        background: url(../images/callout-bg-2.jpg) no-repeat #737b83;
+        background-size: cover;
+    }
+
+    h3,p,a {
+        color: inherit;
+    }
+
+    h3 {
+        font-family: 'Courgette', arial;
+        font-size: 30px;
+        line-height: 1;
+        margin: 0 0 5px;
+        padding: 0;
+    }
+
+    p {
+        font-family: 'Roboto Slab';
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+
+    a {
+        font-family: 'Roboto Slab';
+        font-size: 14px;
+    }
+}
+
+.promo-big {
+    margin: 90px 0;
+    color: #6a737b;
+
+    h2 {
+        font-size: 40px;        
+        margin: 60px 0 30px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+ 
+    a {
+        color: inherit;
+        font-weight: 400;
+    }   
 }
