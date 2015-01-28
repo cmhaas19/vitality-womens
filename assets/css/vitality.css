@@ -12,10 +12,13 @@ body {
   padding: 18px 0;
   background-color: #c5cfd6;
 }
-.banner-bar .latest-news-label-wrap {
+.latest-news-label-wrap {
   text-align: center;
 }
 @media (min-width: 768px) {
+  .latest-news-label-wrap {
+    text-align: left;
+  }
   .banner-bar .latest-news-label-wrap {
     text-align: right;
   }
@@ -379,29 +382,32 @@ body {
   color: #c5cfd6;
   font-size: 12px;
   min-height: 30px;
-  padding: 5px 0;
+  padding: 12px 0;
 }
 .footer .footer-bottom a {
   color: inherit;
 }
 .footer .footer-bottom ul {
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 200px;
 }
 .footer .footer-bottom ul li {
-  margin: 0 10px;
+  margin: 0 5px;
+}
+.footer .footer-bottom ul li:first-child {
+  margin-bottom: 7px;
 }
 .footer .footer-left {
-  padding-top: 50px;
-  padding-bottom: 45px;
+  padding: 35px 0;
   text-align: center;
 }
 .footer .footer-left p {
   font-size: 12px;
   color: #6a737b;
   line-height: 22px;
-  margin-top: 60px;
+  margin: 35px 0 0;
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
 .footer .footer-left p a {
   color: inherit;
@@ -416,8 +422,7 @@ body {
   margin: 0 auto;
 }
 .footer .footer-right {
-  padding: 25px 0;
-  margin-left: 80px;
+  padding: 25px 0 0 0;
 }
 .footer .footer-right .newsletter {
   margin-bottom: 20px;
@@ -427,43 +432,46 @@ body {
   -webkit-columns: 2;
   -moz-columns: 2;
   padding: 0;
+  list-style-type: none;
+  margin: 0 10px 20px 10px;
 }
 .footer .footer-nav li a {
   font-family: inherit;
   color: #6a737b;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
-  margin: 5px 0;
+  margin: 7px 0;
 }
 .footer .box {
-  padding: 25px 20px;
-  border-radius: 6px;
+  padding: 25px;
+  /*border-radius: 6px;*/
+
   background-color: #60c2a6;
   font-family: 'Roboto Slab';
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 0 -15px;
 }
 .footer .box label {
-  font-size: 12px;
+  font-size: inherit;
   color: #32846c;
   display: block;
   text-transform: uppercase;
 }
 .footer .box .phone {
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-size: 24px;
   display: block;
 }
 .footer .box p {
   font-size: inherit;
-  margin-bottom: 0;
+  margin-top: 5px;
 }
 .footer .box .fa {
   margin: 0 10px 0 5px;
   font-size: 18px;
 }
 .footer .box .social {
-  line-height: 2.2em;
+  line-height: 1.8em;
 }
 .footer .box .social a {
   color: inherit;
