@@ -4,14 +4,12 @@ html {
 }
 
 body {
-	font-family: 'Roboto Slab', Arial,sans-serif;
+	font-family: 'Roboto Slab', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
 	background-color: #fff;
 }
-
-
 
 .gray-bg {
 	background-color: #e7eef4;
@@ -20,6 +18,16 @@ body {
 .banner-bar {
     padding: 18px 0;
     background-color: #c5cfd6;
+
+    .latest-news-label-wrap {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-bar .latest-news-label-wrap {
+        text-align: right;
+    }
 }
 
 .latest-news-label {
@@ -28,9 +36,23 @@ body {
     font-size: 16px;
     text-transform: uppercase;
     color: #009ac7;
-    margin: 18px 0 0 0;
-    display: inline-block;
-    margin-top: 15px;    
+    margin: 0 0 18px 0;
+    display: inline-block; 
+}
+
+@media (min-width: 768px) {
+    .latest-news-label {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .latest-news-label {
+        font-size: 16px;
+        margin-top: 14px;
+    }
 }
 
 .input-group.newsletter {
@@ -45,7 +67,7 @@ body {
         background-color: #e7eef4; 
         -webkit-box-shadow: none;
         box-shadow: none; 
-        padding: 8px 12px;
+        padding: 8px 4px;
         height: 48px;
     }
 
@@ -77,14 +99,15 @@ body {
 
 .featurettes {
     background: url(../images/blue-tree-bg.png) center right no-repeat #eaf7fb;
-    padding: 35px 0; 
+    padding: 3px 0; 
     /*background-size: 100%;*/
 }
 
 .featurette {
-    padding: 30px;
-    height: 210px;   
+    padding: 16px;
+    height: 142px;   
     color: #fff;
+    margin: 12px 0;
     
 
     &.left {
@@ -103,7 +126,7 @@ body {
 
     h3 {
         font-family: 'Courgette', arial;
-        font-size: 30px;
+        font-size: 20px;
         line-height: 1;
         margin: 0 0 5px;
         padding: 0;
@@ -111,9 +134,9 @@ body {
 
     p {
         font-family: 'Roboto Slab';
-        font-size: 36px;
-        line-height: 40px;
-        margin-bottom: 25px;
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 8px;
     }
 
     a {
@@ -123,23 +146,40 @@ body {
 }
 
 .promo-big {
-    margin: 90px 0;
+    margin: 70px 0;
     color: #6a737b;
 
     h2 {
-        font-size: 40px;        
-        margin: 60px 0 30px;
+        font-size: 24px;        
+        margin: 24px 0;
+        line-height: 1.2;
     }
 
-    p {
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 1.8;
-        margin-bottom: 40px;
+    p {        
+        font-size: 16px;
+        margin-bottom: 30px;
     }
  
     a {
         color: inherit;
+        font-size: 16px;
         font-weight: 400;
     }   
+}
+
+@media (min-width: 768px) {
+    .promo-big {
+
+        h2 {
+            font-size: 40px;
+            margin: 60px 0 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+    }
 }
