@@ -70,6 +70,8 @@ body {
         border: solid 1px #e7eef4;
         background-color: #e7eef4; 
         -webkit-box-shadow: none;
+        -webkit-appearance: caret;
+	    -moz-appearance: caret;
         box-shadow: none; 
         padding: 8px 4px;
         height: 48px;
@@ -107,6 +109,8 @@ body {
     /*background-size: 100%;*/
 }
 
+
+
 .featurette {
     padding: 16px;
     height: 142px;   
@@ -117,11 +121,13 @@ body {
     &.left {
         background: url(../images/callout-bg-1.jpg) no-repeat #737b83;
         background-size: cover;
+        background-position: center center;
     }
 
     &.right {
         background: url(../images/callout-bg-2.jpg) no-repeat #737b83;
         background-size: cover;
+        background-position: center center;
     }
 
     h3,p,a {
@@ -148,6 +154,29 @@ body {
         font-size: 14px;
     }
 }
+
+@media (min-width: 768px) {
+
+    .featurettes {
+        padding: 20px 0;
+    }
+
+    .featurette {
+        height: 210px; 
+        padding: 20px;
+        
+        h3 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 34px;
+            line-height: 38px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
 
 .promo-big {
     margin: 70px 0;
