@@ -17,7 +17,7 @@ body {
 
 .banner-bar {
     padding: 18px 0;
-    background-color: #c5cfd6;    
+    background-color: #d1dce5;    
 }
 
 .latest-news-label-wrap {
@@ -116,6 +116,8 @@ body {
     height: 142px;   
     color: #fff;
     margin: 12px 0;
+    display: block;
+    text-decoration: none !important;
     
 
     &.left {
@@ -130,8 +132,12 @@ body {
         background-position: center center;
     }
 
-    h3,p,a {
-        color: inherit;
+    h3,p,span {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     h3 {
@@ -149,7 +155,7 @@ body {
         margin-bottom: 8px;
     }
 
-    a {
+    span {
         font-family: 'Roboto Slab';
         font-size: 14px;
     }
