@@ -309,7 +309,7 @@ body {
 .nav > li.outline {
   margin-left: 10px;
 }
-.nav > li.outline a {
+.nav > li.outline > a {
   color: #0095c3;
   border-color: #0095c3;
   padding-left: 20px;
@@ -322,7 +322,7 @@ body {
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
 }
-.nav > li.outline a:hover {
+.nav > li.outline > a:hover {
   background-color: #0095c3;
   color: #fff;
 }
@@ -450,21 +450,75 @@ body {
     margin-left: -25px;
   }
 }
+.mm-list > li.callout > span {
+  font-family: 'Courgette', Arial;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5fc2a5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.mm-list > li.callout > span:hover {
+  color: #5fc2a5;
+}
+.mm-list > li.callout > span .phone {
+  font-family: 'Roboto Slab', Arial;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  font-style: normal;
+}
 .mm-list > li {
-  border-bottom: solid 1px #3d3d3d;
+  border-bottom: solid 1px #cfd6dc;
 }
 .mm-list > li > a,
 .mm-list > li > span {
-  color: #7d6a56;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.1em;
+  color: #6a737b;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  font-family: 'Roboto Slab', Arial;
+  font-size: 24px;
+  padding: 20px;
+}
+.mm-list > li > a.blue,
+.mm-list > li > span.blue,
+.mm-list > li > a.blue:hover,
+.mm-list > li > span.blue:hover {
+  color: #0095c3;
 }
 .mm-list > li > a:hover,
 .mm-list > li > span:hover {
-  color: #f4856e;
+  color: #6a737b;
+}
+/* Sub-nav */
+.mm-list > li > ul > li > a,
+.mm-list > li > ul > li > span {
+  font-size: 16px;
+  padding: 10px;
+}
+.mm-menu.mm-vertical li ul.mm-list.mm-panel {
+  padding: 0 0 10px 10px;
+}
+.mm-list > li > ul > li {
+  border-bottom: none;
+}
+.mm-list > li.mm-opened > a {
+  color: #5fc2a5;
+}
+.mm-menu .mm-list > li > a.mm-subopen:after,
+.mm-menu .mm-list > li > a.mm-subclose:before {
+  border-color: #6a737b;
+}
+.mm-menu .mm-list > li.mm-opened > a.mm-subopen:after,
+.mm-menu .mm-list > li.mm-opened > a.mm-subclose:before {
+  border-color: #5fc2a5;
+}
+.mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
+  top: 24px;
+}
+.mm-list a.mm-subopen::before {
+  border-left: none;
 }
 /*
 	Footer
@@ -663,7 +717,7 @@ body {
   }
 }
 .carousel {
-  height: 492px;
+  height: 350px;
   margin-bottom: 0;
   position: relative;
   z-index: 99;
@@ -696,7 +750,7 @@ body {
   font-family: 'Roboto Slab';
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   max-width: 350px;
 }
 .carousel-caption .backdrop {
@@ -722,7 +776,7 @@ body {
   height: 325px;
 }
 .carousel .item {
-  height: 492px;
+  height: 350px;
   background-color: #fff;
 }
 .carousel .item > .container {
@@ -742,7 +796,6 @@ body {
   border-color: #5fc2a5;
 }
 .carousel .item-background {
-  background-image: url(../images/slide-1.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -752,7 +805,23 @@ body {
   height: 100%;
   width: 100%;
 }
+.carousel .item-one .item-background {
+  background-image: url(../images/slide-1-mobile.jpg);
+}
+.carousel .item-two .item-background {
+  background-image: url(../images/slide-2-mobile.jpg);
+}
+.carousel .item-three .item-background {
+  background-image: url(../images/slide-3-mobile.jpg);
+}
+.carousel .item-three .carousel-caption h3 {
+  color: #fff;
+}
 @media (min-width: 768px) {
+  .carousel,
+  .carousel .item {
+    height: 492px;
+  }
   .carousel-caption-image {
     display: block;
   }
@@ -768,15 +837,22 @@ body {
   }
   .carousel-caption p {
     font-size: 18px;
+    margin-bottom: 30px;
   }
   .carousel .item-background {
     background-position: center center;
+  }
+  .carousel .item-one .item-background {
+    background-image: url(../images/slide-1.jpg);
   }
   .carousel .item-two .item-background {
     background-image: url(../images/slide-2.jpg);
   }
   .carousel .item-three .item-background {
     background-image: url(../images/slide-3.jpg);
+  }
+  .carousel .item-three .carousel-caption h3 {
+    color: #6ddaba;
   }
   .carousel .item.item-light h1 {
     color: #009ac7;

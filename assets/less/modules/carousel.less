@@ -1,6 +1,6 @@
 
 .carousel {
-    height: 492px;
+    height: 350px;
     margin-bottom: 0;
     position: relative;
     z-index: 99;
@@ -36,7 +36,7 @@
         font-family: 'Roboto Slab';
         font-size: 16px;
         line-height: 1.6;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         max-width: 350px;
     }
 
@@ -69,7 +69,7 @@
 }
 
 .carousel .item {
-    height: 492px;
+    height: 350px;
     background-color: #fff;
 
     &>.container {
@@ -93,7 +93,6 @@
 }
 
 .carousel .item-background {
-    background-image: url(../images/slide-1.jpg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -104,7 +103,28 @@
     width: 100%;
 }
 
+.carousel .item-one .item-background {
+    background-image: url(../images/slide-1-mobile.jpg);
+} 
+    
+.carousel .item-two .item-background {
+    background-image: url(../images/slide-2-mobile.jpg);
+} 
+    
+.carousel .item-three .item-background {
+    background-image: url(../images/slide-3-mobile.jpg);
+}
+
+.carousel .item-three .carousel-caption h3 {
+    color: #fff;
+}
+
 @media (min-width: 768px) {
+
+    .carousel,
+    .carousel .item {
+        height: 492px;
+    }
 
     .carousel-caption-image {
         display: block;
@@ -123,12 +143,17 @@
         }
 
         p {
-            font-size: 18px;            
+            font-size: 18px;  
+            margin-bottom: 30px;          
         }
     }
     
     .carousel .item-background {
         background-position: center center;
+    } 
+
+    .carousel .item-one .item-background {
+        background-image: url(../images/slide-1.jpg);
     } 
     
     .carousel .item-two .item-background {
@@ -137,6 +162,10 @@
     
     .carousel .item-three .item-background {
         background-image: url(../images/slide-3.jpg);
+    }
+
+    .carousel .item-three .carousel-caption h3 {
+        color: #6ddaba;
     }
 
     .carousel .item.item-light {

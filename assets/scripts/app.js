@@ -8,7 +8,9 @@
 	    //
 	    // Initialize Mobile Menu
 	    //
-	    $("#slide-nav").mmenu();
+	    $("#slide-nav").mmenu({
+	        slidingSubmenus: false
+	    });
 	    
         //
 	    // Enable swiping for Carousel
